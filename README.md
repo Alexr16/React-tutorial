@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Math Magicians
+# To-do App
 
-> In this project I build a "Math magicians" App that allows users to Make simple calculations and read a random math-related quote.
+> In this project I build a "To-do" App that allows users to create a to-do list.
 <!-- ## Screenshot
 
 <img src="./leaderboard.png">
@@ -12,6 +12,7 @@
 
 - React
 - CSS
+- SCSS
 - JavaScript
 - HTML
 
@@ -25,10 +26,10 @@ To get a local copy of the project, follow these steps:
 1. Open the terminal and navigate to the folder where you would like to put these files.
 2. Type the following commands into the terminal: 
  ```
- git clone https://github.com/Alexr16/MathMagicians
+ git clone https://github.com/Alexr16/React-tutorial
  ```
  ```
- cd MathMagicians
+ cd React-tutorial
  ```
  
 ## Run project
@@ -36,12 +37,6 @@ To get a local copy of the project, follow these steps:
 ```bash
 $ npm install
 $ npm run start # this will make webpack watching for your changes in code
-```
-
-### Open page in browser
-
-```bash
-$ open dist/index.html
 ```
 
 ## Author
@@ -56,7 +51,7 @@ $ open dist/index.html
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Alexr16/MathMagicians/issues).
+Feel free to check the [issues page](https://github.com/Alexr16/React-tutorial/issues).
 
 ## Show your support
 
