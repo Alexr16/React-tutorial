@@ -14,8 +14,9 @@ const TodoItem = (props) => {
     <li className={styles.item}>
       <input type="checkbox" checked={todo.completed} onChange={() => handleChangeProps(todo.id)} className={styles.checkbox} />
       <button type="button" onClick={() => deleteTodoProps(todo.id)}>Delete</button>
-      <span style={todo.completed ? completedStyle : null} />
-      {todo.title}
+      <span style={todo.completed ? completedStyle : null}>
+        {todo.title}
+      </span>
     </li>
   );
 };
