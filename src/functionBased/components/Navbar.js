@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
+import { MdClose } from 'react-icons/md';
+import { FiMenu } from 'react-icons/fi';
 
 const Navbar = () => {
   const links = [{
@@ -18,15 +20,25 @@ const Navbar = () => {
     text: 'NotMatch',
   }];
 
+  const [navbarOpen, setNavbarOpen] = useState(false);
+  const handleToggle = () => {
+    setNavbarOpen(!navbarOpen);
+  };
+  const closeMenu = () => {
+    setNavbarOpen(false);
+  };
   return (
     <div>
-      <nav
-        style={{
-          padding: '1rem',
-        }}
-      >
-        {/* <nav className="navBar"> */}
-        <ul style={{ display: 'flex', flexDirection: 'row' }}>
+      <nav className="navBar">
+        <button type="button" onClick={handleToggle}>
+          {navbarOpen ? (
+            <MdClose style={{ color: '#fff', width: '40px', height: '40px' }} />
+          ) : (
+            <FiMenu style={{ color: '#7b7b7b', width: '40px', height: '40px' }} />
+          )}
+
+        </button>
+        <ul className={`menuNav ${navbarOpen ? ' showMenu' : ''}`}>
           {links.map((link) => (
             <li
               key={link.id}
@@ -42,8 +54,8 @@ const Navbar = () => {
                   margin: '1rem 0',
                   color: isActive ? 'red' : '',
                 })}
+                onClick={() => closeMenu()}
                 to={link.path}
-                // activeClassName="active-link"
                 exact
               >
                 {link.text}
@@ -51,7 +63,6 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        {/* </nav> */}
       </nav>
       <Outlet />
     </div>

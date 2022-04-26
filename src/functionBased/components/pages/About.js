@@ -1,4 +1,4 @@
 import React from 'react';
 
-const About = () => <div>hello from about page</div>;
+const About = () => <div className="about__content">hello from about page</div>;
 export default About;
